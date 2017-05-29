@@ -52,3 +52,22 @@ INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '15:20');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '22:45');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '22:00');
 INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2017, '15:30');
+
+-- Q1 - Return ALL the data in the 'movies' table.
+-- A1 - SELECT * FROM movies
+-- Q2 - Return ONLY the name column from the 'people' table
+-- Q3 - SELECT (name) FROM people;
+-- Q4 - Oops! Someone at CodeClan spelled Graham's name wrong! Change it to reflect the proper spelling ('Graeme Broose' should be 'Graham Bruce').
+-- A4 -UPDATE people SET name = 'Graham Bruce' WHERE name = 'Graeme Broose';
+-- Q5 - Return ONLY your name from the 'people' table.
+-- A5 - SELECT name FROM people WHERE name = 'David Clarkson';
+-- Q6 - The cinema is showing 'Batman Begins', but Batman is DC, not Marvel! Delete the entry from the 'movies' table.
+-- A6 - DELETE FROM movies WHERE title = 'Batman Begins';
+-- Q7 - Create a new entry in the 'people' table with the name of one of the instructors.
+-- A7 - INSERT INTO people (name) VALUES ('John McCollum');
+-- Q8 - Harvey Wheaton has decided to hijack our movie evening, Remove him from the table of people.
+-- A8 - DELETE FROM people WHERE name = ('Harvey Wheaton')
+-- Q9 - The cinema has just heard that they will be holding an exclusive midnight showing of 'Spider-man: Homecoming'!! Create a new entry in the 'movies' table to reflect this.
+-- A9 - INSERT INTO movies (title, year, show_time) VALUES ('Spider-man: Homecoming', 2017, '00:00');
+-- Q10 - The cinema would also like to make the Guardian movies a back to back feature. Update the 'Guardians of the Galaxy' show time from 15:30 to 20:00
+UPDATE movies SET show_time = '20:00' WHERE title = 'Guardians of the Galaxy 2' 
